@@ -24,16 +24,18 @@ class CarWashStation:
             distance_from_city_center
             if 1.0 <= distance_from_city_center <= 10.0 else 1.0
         )
-        self.clean_power = (clean_power
-                            if 1 <= clean_power <= 10 else 1)
-        self.average_rating = (average_rating
-                               if 1.0 <= average_rating <= 5.0 else 1.0)
+        self.clean_power = (
+            clean_power if 1 <= clean_power <= 10 else 1
+        )
+        self.average_rating = (
+            average_rating
+            if 1.0 <= average_rating <= 5.0 else 1.0
+        )
         self.count_of_ratings = count_of_ratings
 
     def wash_single_car(self, car: Car) -> None:
         if self.clean_power > car.clean_mark:
-            clean_mark = self.clean_power
-            car.clean_mark = clean_mark
+            car.clean_mark = self.clean_power
 
     def serve_cars(self, cars: list) -> float:
         income = 0.0
