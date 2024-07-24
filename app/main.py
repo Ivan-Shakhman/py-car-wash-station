@@ -5,10 +5,12 @@ class Car:
             clean_mark: int,
             brand: str
     ) -> None:
-        self.comfort_class = (comfort_class
-                              if 1 <= comfort_class <= 7 else 1)
-        self.clean_mark = (clean_mark
-                           if 1 <= clean_mark <= 10 else 1)
+        self.comfort_class = (
+            comfort_class if 1 <= comfort_class <= 7 else 1
+        )
+        self.clean_mark = (
+            clean_mark if 1 <= clean_mark <= 10 else 1
+        )
         self.brand = brand
 
 
